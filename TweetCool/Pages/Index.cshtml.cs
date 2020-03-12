@@ -26,20 +26,9 @@ namespace TweetCool.Pages
 
         public void OnPost([FromForm(Name = "username")] string username , [FromForm(Name = "message")] string message)
         {
-            List<Message> messages;
-        
-            if (AllMessageModel.Messages.ContainsKey(username))
-            {
-                messages = AllMessageModel.Messages[username];
-            }
-           
-            else
-            {
-                messages = new List<Message>();
-                AllMessageModel.Messages[username] = messages;
-            }
-            messages.Add(new Message(username, message));
-            Response.Redirect("/AllMessage");
+            
+            NewMessageModel.Message = new Message(username, message);
+            Response.Redirect("/NewMessage");
         }
     }
 }

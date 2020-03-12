@@ -1,0 +1,28 @@
+﻿@page
+@model TweetCool.NewMessageModel
+@{
+    ViewData["Title"] = "NewMessage";
+}
+
+<html>
+    <head>
+        <title>
+            The new cool tweet
+        </title>
+        <link href="~/css/NewMessage.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="text-center">
+            <h1>NewMessage</h1>
+        </div>
+        <div>
+            <h1>@NewMessageModel.Message.Username</h1>
+            <p>@NewMessageModel.Message.PostTime : @NewMessageModel.Message.Text</p>
+            <p><a href="/Index">Go back to Tweet more cool messages</a></p>
+        </div>
+        <div>
+            <img src="~/specialbird.png" width="1000" height="500" style="text-align:center"/>
+        </div>
+    </body>
+</html>
+

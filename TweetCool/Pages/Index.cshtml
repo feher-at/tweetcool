@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<html>
+    
+    <head>
+        <title>TweetCool</title>
+        <link href="~/css/Index.css" rel="stylesheet" />
+
+    </head>
+      
+    <body>
+        <div class="text-center">
+            <h1 class="display-4">Welcome on the Tweetcool</h1>
+            <p> Write a cool message and check it on the Message </p>
+        </div>
+        <div>
+            <form method="post">
+                <label for="username">
+                    Username
+                    <input type="text" id="name" name="username" required><br>
+                </label>
+                <label for="message">
+                    The message:
+                    <input id="textbox" type="text" name="message" required><br>
+
+                </label>
+                <button>Submit</button>
+            </form>
+            <img src="~/specialbird.png" style="float:right" /><img src="~/specialbird.png" style="float:left" />
+            <p></p>
+        </div>
+    </body>
+</html>
+
+

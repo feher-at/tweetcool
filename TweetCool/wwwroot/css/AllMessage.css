@@ -1,0 +1,11 @@
+﻿body {
+    background-color:aqua;
+
+}
+#commenter{
+    font-size:20px;
+    font-weight:bold;
+}
+#tweet{
+    font-size:10px;
+}

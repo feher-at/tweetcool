@@ -1,0 +1,31 @@
+﻿@page
+@model TweetCool.AllMessageModel
+@{
+    ViewData["Title"] = "AllMessage";
+}
+<html>
+    <head>
+        <title>All messages></title>
+        <link href="~/css/AllMessage.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <h1>Here is all the messages you posted on the TweetCool</h1>
+        </div>
+        <div>
+            @foreach (var username in AllMessageModel.Messages.Keys)
+            {
+                <div>
+                    <p id="commenter">@username</p>
+                    @foreach (Message message in AllMessageModel.Messages[username])
+                    {
+                        <p id="tweet">@message.PostTime : @message.Text</p>
+                    }
+                </div>
+
+            }
+            <img src="~/specialbird.png" width="200" height="300" style="float:right" />
+        </div>
+    </body>
+</html>
+
